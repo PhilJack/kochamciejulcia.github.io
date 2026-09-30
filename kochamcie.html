@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KOCHAM CIE JULICIA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: navy;
+      color: white;
+      text-align: center;
+    }
+    main { max-width: 900px; margin: 0 auto; padding: 2rem 1rem 5rem; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img { width: 100%; }
+    #music-btn { position: fixed; bottom: 1rem; right: 1rem; padding: 0.5rem 1rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>KOCHAM CIE JULICIA</h1>
+
+    <div class="gallery">
+      <img src="glupie_kotki1.jpg" alt="Głupi kotek 1">
+      <img src="glupi_kotek2.jpg" alt="Głupi kotek 2">
+      <img src="glupi_kotek3.jpg" alt="Głupi kotek 3">
+      <img src="glupi_kotek4.jpg" alt="Głupi kotek 4">
+    </div>
+  </main>
+
+  <audio id="bg-music" src="U2%20-%20With%20Or%20Without%20You%20(Official%20Audio).mp3" loop></audio>
+  <button id="music-btn">muzyczka!</button>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+    document.getElementById("music-btn").addEventListener("click", () => {
+      if (audio.paused) { audio.play(); } else { audio.pause(); }
+    });
+  </script>
+</body>
+</html>
